@@ -1,0 +1,71 @@
+1 - What?
+    PHP framework 
+    Use MVC design pattern
+    Includes Artisan CLI - DB migrations,create controllers,models,jobs,events
+    Includes Eloquent ORM(Object Relational Mapper) for working with DB
+    Use blade template engine 
+
+2 - What can do?
+    Route handling
+    Security 
+    Models & DB migration 
+    Views/Templates 
+    Authentication
+    Sessions 
+    Unit testing 
+    Cache handling 
+
+3 - Need 
+    Xammp - Apache/PHP/MySQL
+    Composer - Dependency manager 
+
+4 - Set up Laravel project 
+I - Navigate htdocs 
+    cd .. - Go back to previous directory 
+    cd xampp/htdocs - Go to htdocs 
+
+II - Create project 
+    composer create-project laravel/laravel <appname> 
+
+III - Navigate to created app 
+    cd <appname> 
+
+5 - Run app 
+    Run php,MySQL in xampp 
+    Type localhost/<appname>
+
+6 - File structure 
+    app - Model, Controllers, Authentication, Providers
+    resources - views(blade files - HTML with dynamic properties),js, sass files 
+    routes - add routes to app (web,api routes,broadcasting channels,Closure based commands)
+    config - configaration files - DB 
+    .env - DB credintials 
+
+7 - Routes 
+    web.php - Route elements to the browser (can use get,post,delete methods)  
+
+8 - Controller 
+    Create a controller(Controller name must be in pascal case)
+        php artisan make:controller <ControllerName>  
+
+9 - Map a view from controller 
+    Create a view - about.blade.php 
+    Add function in controller - PageController.php 
+        public function about() {
+            return view('Pages.about');
+        }
+    Add route in web.php 
+        Route::get('/about', 'PagesController@about'); 
+
+10 - When we have same html pages, we can create a layout 
+        layout file - @yield('content')         
+     Then we can extend from layout file 
+        @extends('layouts.app')
+
+        @section('content')
+            <content>
+        @endsection 
+
+11 - Pass value blade template 
+    
+
