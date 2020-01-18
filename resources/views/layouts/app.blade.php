@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{config('app.name', 'LApp')}}</title>
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    </head>       
+    </head>
     <body>
         @include('inc.navbar')
         <div class="container">
+            @include('inc.messages')
             @yield('content')
         </div>
-       
     </body>
 </html>

@@ -20,12 +20,12 @@ Route::get('/', function () {
     return view('Welcome');
 });
 
-// Route to /hello 
+// Route to /hello
 Route::get('/hello', function () {
     return '<h1>Hello World 2</h1>';
 });
 
-// Route to /about view 
+// Route to /about view
 Route::get('/about', function () {
     return view('Pages.about');
 });
@@ -43,4 +43,5 @@ Route::get('/users/{id}/{name}', function ($id,$name) {
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
-// Route::resource('posts', 'PostController');
+
+Route::resource('posts', 'PostController');
