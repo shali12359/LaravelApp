@@ -68,4 +68,12 @@ III - Navigate to created app
 
 11 - Pass value blade template
 
-Add html form - composer require laravelcollective/html    
+12 - Add html form - composer require laravelcollective/html    
+
+13 - Make authentication - php artisan ui:auth 
+
+14 - Create new db migration - php artisan make: migration <migrationName>
+                               php artisan migrate
+
+15 - Check version - php artisan --version
+
